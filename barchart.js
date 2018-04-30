@@ -111,5 +111,5 @@ svg.append("g")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
         .attr("transform", function(d) {
-        return "rotate(-90)" 
+        return "rotate(90)" 
         });
