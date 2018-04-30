@@ -106,5 +106,5 @@ svg.append("g")
     .call(d3.axisBottom(x))
     .selectAll("text")
     .attr("transform", function(d) {
-        return "rotate(-90)" 
+        return "rotate(90)" 
         });
