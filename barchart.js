@@ -102,10 +102,12 @@ svg.selectAll(".text")
 var x = d3.scaleBand().rangeRound([0,915])
 x.domain(data.map(function(d){return d.cuisine;}))
 svg.append("g")
-    .attr("transform", "translate(0, 415)")
-    .call(d3.axisBottom(x))
-    .selectAll("text")
-    .style("text-anchor", "start")
-    .attr("transform", function(d) {
+    .attr("class","x axis")
+    .attr("id","x")
+        .attr("transform", "translate(0, 415)")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("transform", function(d) {
         return "rotate(90)" 
         });
