@@ -67,7 +67,7 @@ var data = [
 console.log(data.length)
 // Create variable for the SVG
 var svg = d3.select("body").append("svg")
-          .attr("height","100%")
+          .attr("height","50%")
           .attr("width","100%");
 var numCusine = data.length
 
