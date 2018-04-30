@@ -8,14 +8,13 @@
 <body>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
 <h1> Visualization for PocketChef</h1>
 <p>This D3 visualization is done to get an insight the recipes aspect of the sight we are reviewing. The graph is to show how the recipes correspond to the cuisine types. The insight gained is that there is not a large amount of diverstiy in how many recipes exist for each cuisine.</p>
 
 <h2>Ingredients for Each Type of Cuisine</h2>
-    <script type="text/javascript" src="barchart.js"></script>
-    
+<script type="text/javascript" src="barchart.js"></script>
+
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -31,7 +30,7 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("d3Ddata.tsv", function(d) {
+d3.csv("d3Ddata.csv", function(d) {
   d.frequency = +d.frequency;
   return d;
 }, function(error, data) {
