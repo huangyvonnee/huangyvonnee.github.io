@@ -104,12 +104,12 @@ x.domain(data.map(function(d){return d.cuisine;}))
 svg.append("g")
     .attr("class","x axis")
     .attr("id","x")
-        .attr("transform", "translate(0, 415)")
+        .attr("transform", "translate(0," + (h) + ")")
         .call(d3.axisBottom(x))
         .selectAll("text")
         .style("text-anchor", "end")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
         .attr("transform", function(d) {
-        return "rotate(90)" 
+        return "rotate(-90)" 
         });
