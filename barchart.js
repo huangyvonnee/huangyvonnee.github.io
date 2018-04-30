@@ -109,5 +109,5 @@ svg.append("g")
         .selectAll("text")
         .style("text-anchor", "start")
         .attr("transform", function(d) {
-        return "rotate(90)" 
+        return "rotate(-90)" 
         });
