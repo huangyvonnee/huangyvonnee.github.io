@@ -97,7 +97,7 @@ svg.selectAll(".text")
            .attr("class","label")
            .attr("x", (function(d) { return x(d.cuisine); }  ))
            .attr("y", function(d) { return y(d.cuisine) - 20; })
-           .attr("dy", ".35em")
+           .attr("dy", ".75em")
            .attr("transform", "rotate(90)")
            .text(function(d) { return d.cuisine; });      
 var x = d3.scaleBand().rangeRound([0,915])
@@ -106,7 +106,6 @@ svg.append("g")
     .attr("transform", "translate(0, 415)")
     .call(d3.axisBottom(x))
     .selectAll("text")
-    .style("text-anchor", "start")
     .attr("transform", function(d) {
         return "rotate(90)" 
         });
