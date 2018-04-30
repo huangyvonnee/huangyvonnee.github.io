@@ -103,7 +103,7 @@ svg.selectAll(".text")
            //.attr("y", function(d) { return y(d.cuisine) - 20; })
            .attr("dy", ".35em")
            .attr("transform", "rotate(90)")
-           //.text(function(d) { return d.cuisine; })
+           .text(function(d) { return d.cuisine; })
            .style("text-anchor", "start");      
 var x = d3.scaleBand().rangeRound([0,915])
 x.domain(data.map(function(d){return d.cuisine;}))
