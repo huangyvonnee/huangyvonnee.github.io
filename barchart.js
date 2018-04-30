@@ -99,8 +99,14 @@ svg.selectAll(".text")
            .attr("y", function(d) { return y(d.cuisine) - 20; })
            .attr("dy", ".35em")
            .attr("transform", "rotate(90)")
-           .text(function(d) { return d.cuisine; })
-           .style("text-anchor", "start");      
+           .text(function(d) { return d.cuisine; });      
 var x = d3.scaleBand().rangeRound([0,915])
 x.domain(data.map(function(d){return d.cuisine;}))
-
+svg.append("g")
+    .attr("transform", "translate(0, 415)")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .style("text-anchor", "start")
+    .attr("transform", function(d) {
+        return "rotate(90)" 
+        });
