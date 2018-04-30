@@ -90,17 +90,13 @@ svg.selectAll("text")
            .attr("x", function(d, i) {return (i * 15)+11})
            .attr("y", function(d, i) {return 415 - (d.numRecipes*5)});
 
-var xAxis = d3.svg.axis()
-    .scale(numRecipes);
-
 svg.selectAll(".text")        
     .data(data)
     .enter()
     .append("text")
            .attr("class","label")
-           .call(xAxis)
            .attr("x", (function(d) { return x(d.cuisine); }  ))
-           //.attr("y", function(d) { return y(d.cuisine) - 20; })
+           .attr("y", function(d) { return y(d.cuisine) - 20; })
            .attr("dy", ".35em")
            .attr("transform", "rotate(90)")
            .text(function(d) { return d.cuisine; })
