@@ -98,7 +98,6 @@ svg.selectAll(".text")
            .attr("x", (function(d) { return x(d.cuisine); }  ))
            .attr("y", function(d) { return y(d.cuisine) - 20; })
            .attr("dy", ".75em")
-           .attr("transform", "rotate(90)")
            .text(function(d) { return d.cuisine; });      
 var x = d3.scaleBand().rangeRound([0,915])
 x.domain(data.map(function(d){return d.cuisine;}))
@@ -107,5 +106,5 @@ svg.append("g")
     .call(d3.axisBottom(x))
     .selectAll("text")
     .attr("transform", function(d) {
-        return "rotate(90)" 
+        return "rotate(-90)" 
         });
